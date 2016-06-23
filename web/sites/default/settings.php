@@ -714,20 +714,6 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
-$databases['default']['default'] = array (
-  'database' => 'drupal-starter',
-  'username' => 'drupal',
-  'password' => 'password',
-  'prefix' => '',
-  'host' => '127.0.0.1',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = '../config/sync';
-
-
+if (file_exists(__DIR__ . '/settings.local.php')) {
+  include __DIR__ . '/settings.local.php';
+}
